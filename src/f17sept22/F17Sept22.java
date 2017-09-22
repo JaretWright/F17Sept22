@@ -21,6 +21,11 @@ public class F17Sept22 {
         System.out.printf("That is a%s phone number%n", checkPhoneNumber(userInput)?
                                                     " valid" : "n invalid");
 
+        System.out.print("enter your first name: ");
+        String name = keyboard.nextLine();
+        
+        System.out.printf("Your first name is %s %n", checkName(name)?
+                                                    "valid" : "invalid");
     }  
     
     public static boolean checkAreaCode(String areaCode)
@@ -31,5 +36,10 @@ public class F17Sept22 {
     public static boolean checkPhoneNumber(String phoneNum)
     {
         return phoneNum.matches("\\(?[2-9]\\d{2}\\)?[-.\\s]?[2-9]\\d{2}[-.\\s]?\\d{4}");
+    }
+    
+    public static boolean checkName(String name)
+    {
+        return name.matches("[A-Z][a-zA-Z]*");
     }
 }
